@@ -1,0 +1,7 @@
+LXI H, 0000H
+MOV A, M
+CMA
+ADI 01H       // Add Data Immediate to Accumulator, DATA
+INX H
+MOV M, A
+HLT
