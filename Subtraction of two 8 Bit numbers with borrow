@@ -1,0 +1,13 @@
+LXI H, 0000H
+MOV A, M
+INX H
+MOV B, M
+MVI C, 00H          // Using C register to show whether carry generated or not
+SUB B               // SUBtract A from B
+JNC continue        // Jump if No Carry, Address, using label for online compiler
+INR C               // if carry is generated increment C, i.e. carry flag is set to 1
+continue: INX H     // else Increment HL pair to store data at next memory address, i.e. when carry flag remains 0
+MOV M, A
+INX H
+MOV M, C
+HLT
