@@ -3,4 +3,4 @@ MOV B, A    // MOVe content of A to B
 LDA 0001H   // Load Data in Accumulator, ADDRESS
 SUB B       // SUBtract A from B
 STA 0002H   // STore Accumulator's data at, ADDRESS
-HLT         // HaLT
+HLT         // HaLT.
