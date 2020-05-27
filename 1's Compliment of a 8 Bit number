@@ -1,0 +1,6 @@
+LXI H, 0000H  // Load Pair Immediate HL, DATA
+MOV A, M      // MOVe content of M to A, i.e data present at memory address M to A accumulator
+CMA           // CoMpliment Accumulator
+INX H         // Increment pair HL
+MOV M, A      // MOVe content of Accumulator to address M
+HLT           // Halt
