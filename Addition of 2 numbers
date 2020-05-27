@@ -1,0 +1,6 @@
+LDA 0000H   // Load Data in Accumulator, ADDRESS
+MOV B, A    // MOVe content of A to B
+LDA 0001H   // Load Data in Accumulator, ADDRESS
+ADD B       // ADD B with Accumulator
+STA 0002H   // STore Accumulator's data at, ADDRESS
+HLT         // HaLT
