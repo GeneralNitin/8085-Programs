@@ -1,0 +1,13 @@
+MVI C, 05H          // Counter
+MVI D,00H           // Another register to compare with
+LXI H, 0000H        // Load Register Pair Immediate
+LOOP: MOV A, M      // Moving content pointed by the register pair HL to Accumulator
+INX H               // Increment H
+CMP D               // CMP Instruction
+JC SKIP             // Jump if carry to the label SKIP
+MOV D, A            // MOVe content of A to D
+SKIP: DCR C         // Decrementing the counter
+JNZ LOOP            // Jump if counter is not zero to the label LOOP
+MOV A, D            // MOVe content of D to A
+STA 0010H           // STore Accumulator to 0010H
+HLT                 // Halt
